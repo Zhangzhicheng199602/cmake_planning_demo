@@ -7,6 +7,7 @@ project(planning
 )
 
 set(CMAKE_CXX_STANDARD 17)
+enable_testing()
 
 # 变量设置
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
@@ -22,8 +23,9 @@ message("CMAKE_MODULE_PATH = ${CMAKE_MODULE_PATH}")
 find_package(Eigen3 3.4 REQUIRED)
 
 if(TARGET Eigen3::Eigen)
-message(STATUS "******** Eigen3 3.4 found in ${EIGEN3_INCLUDE_DIR} ********")
+    message(STATUS "******** Eigen3 3.4 found in ${EIGEN3_INCLUDE_DIR} ********")
 endif()
 
 # 添加子目录
 add_subdirectory(src)
+add_subdirectory(test/map_test)

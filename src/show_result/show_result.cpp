@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 #include <graphics.h>
 #include "show_result.h"
 
@@ -16,6 +17,6 @@ void ShowResult::drawResult()
     circle(500, 500, 200);
     circle(500, 500, 400);
     
-    system("pause");
+    getch();
     closegraph();
 }
